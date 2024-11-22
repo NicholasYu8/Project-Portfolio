@@ -1,0 +1,32 @@
+{
+    "id": "97F6B593",
+    "path": "~/Desktop/Project for data/2/Data_blueberry/Blueberry_Report.Rmd",
+    "project_path": "Blueberry_Report.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1731444392031.0,
+    "source_on_save": true,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "50,5",
+        "scrollLine": "82",
+        "rmdVisualMode": "false",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "5817:2662",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1731446180,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1731446180688,
+    "read_only": false,
+    "read_only_alternatives": []
+}

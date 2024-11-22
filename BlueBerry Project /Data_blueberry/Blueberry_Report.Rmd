@@ -1,0 +1,105 @@
+---
+title: "Blueberry Production Analysis Report"
+author: "Nicholas Yu"
+date: "2024-11-05"
+output: html_document
+---
+
+<style>
+  body {background-color:lightgrey}
+</style>
+
+# Introduction
+
+This report is to analyzes the trends and economic aspects of blueberry production in Ontario, focusing on production, yield, price, and farm value from year to year.
+
+# Data Collection and Preparation
+
+The data sets used in this analysis consists of yearly data on blueberry production in Ontario. It includes the following variables:
+
+-   `Year`: The year of observation.
+-   `Harvested_Area_acres`: The total area of land harvested for blueberries (in acres).
+-   `Marketed_Production_tonnes`: The total marketed production of blueberries (in tonnes).
+-   `Farm_Value_000s`: The total farm value of blueberries (in thousands of dollars).
+-   `Average_Price_per_lb`: The average price per pound of blueberries (in cents).
+-   `Average_Yield_lbs_per_acre`: The average yield per acre of blueberries (in pounds).
+-   `Average_Yield_tonnes_per_ha`: The average yield per hectare of blueberries (in tonnes).
+
+The data set was cleaned by removing rows with missing values, ensuring data consistency (e.g., converting values to the correct units), and addressing any data quality issues.
+
+# Exploratory Data Analysis (EDA)
+
+In this section, I conducted exploratory data analysis to understand the trends in blueberry production and yield over time. The following graphs were created:
+
+### Trend Analysis of Marketed Production Over the Years
+
+\`\`\`{r production-trend} \# Code for Marketed Production Trend ggplot(data, aes(x = Year, y = Marketed_Production_tonnes)) + geom_line() + ggtitle("Marketed Production Over the Years") + xlab("Year") + ylab("Marketed Production (Tonnes)")
+
+### Code for Average Yield Trend
+
+ggplot(data, aes(x = Year, y = Average_Yield_lbs_per_acre)) + geom_line() + ggtitle("Average Yield Over the Years") + xlab("Year") + ylab("Average Yield (lbs per acre)")
+
+------------------------------------------------------------------------
+
+# **Objective Analysis**
+
+This section covers the individual objectives of your analysis, with more focus on the insights you derived from your graphs.
+
+## **Objective 1: Trend Analysis of Production and Yield**
+
+Here you will summarize what you found in Objective 1 based on the graphs you created.
+
+**What to write:** Objective 1: Trend Analysis of Production and Yield
+
+The analysis of trends in marketed production and yield of blueberries over the years shows the following:
+
+-   **Marketed Production**: The marketed production of blueberries increased steadily over the years, reflecting an overall growth in the industry.
+-   **Average Yield**: The yield fluctuated over the years. While there were periods of higher yields, the overall trend suggests some variability, likely due to factors such as weather conditions, farming techniques, and other external variables.
+
+The line charts above illustrate these trends.
+
+## Objective 2: Relationship Between Harvested Area and Production
+
+To analyze the relationship between the harvested area and marketed production, I created a scatter plot that shows the correlation between the two variables.
+
+\`\`\`{r area-production-scatter} \# Code for Harvested Area vs Production Scatter Plot ggplot(data, aes(x = Harvested_Area_acres, y = Marketed_Production_tonnes)) + geom_point() + geom_smooth(method = "lm", se = FALSE, color = "blue") + ggtitle("Harvested Area vs Marketed Production") + xlab("Harvested Area (Acres)") + ylab("Marketed Production (Tonnes)")
+
+#### Objective 3: Price Analysis
+
+Summarize the findings related to price analysis and its correlation with farm value and production.
+
+**What to write:**
+
+The analysis of the relationship between average prices per pound, farm value, and marketed production was conducted through correlation analysis and visualizations.
+
+\`\`\`{r price-analysis-scatter} \# Code for Price vs Farm Value & Production Scatter Plot ggplot(data, aes(x = Average_Price_per_lb, y = Farm_Value_000s)) + geom_point() + geom_smooth(method = "lm", se = FALSE, color = "red") + ggtitle("Price per Pound vs Farm Value") + xlab("Average Price per Pound (Cents)") + ylab("Farm Value (Thousands of Dollars)")
+
+------------------------------------------------------------------------
+
+### Economic Analysis and Findings
+
+Here, you will discuss the economic implications of your analysis. For example, the effects of harvested area, price, and yield on farm value and production.
+
+**What to write:** Economic Analysis and Findings
+
+The economic analysis reveals the following key findings:
+
+-   **Harvested Area and Production**: A positive correlation between harvested area and production indicates that increasing the cultivated area leads to greater overall production, which can help meet growing demand.
+-   **Price and Farm Value**: The analysis shows that higher prices per pound are associated with higher farm values, meaning that higher prices contribute to increased economic returns for producers.
+-   **Economic Implications**: These findings suggest that strategies to increase the harvested area and optimize prices could lead to better financial outcomes for blueberry farmers in Ontario.
+
+The combination of these factors is crucial for understanding the economics of blueberry farming in the region.
+
+# Summary of Findings
+
+In summary, the analysis shows that:
+
+-   Blueberry production in Ontario has been increasing over the years.
+-   There is a strong relationship between harvested area and production, meaning that expanding cultivated areas can increase total production.
+-   Higher prices are associated with higher farm values, indicating that price plays an important role in determining the economic success of blueberry farming.
+
+These findings provide valuable insights for farmers and policymakers looking to improve the economic viability of the blueberry industry in Ontario.
+
+# References
+
+-   Ontario Blueberry Growers Association. (2021). Blueberry Production and Economics Report.
